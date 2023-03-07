@@ -25,10 +25,10 @@
 4.  
     P: Co zostanie wyswietlone w konsoli?
 
-    Odp: Odpowiedź (A) czyli undefined. Proces wygląda następująco czyli deklaracja, następnie wypisanie zminnej w console.log() a w ostatniej kolejności przypisanie wartości do zmiennej, dlatego też zmienną czyta jako zadeklarowaną, ale bez przypisanej wartości do niej.
+    Odp: Odpowiedź (A) czyli undefined. Proces wygląda następująco czyli deklaracja, następnie wypisanie zminnej w console.log() a w ostatniej kolejności przypisanie       wartości do zmiennej, dlatego też zmienną czyta jako zadeklarowaną, ale bez przypisanej wartości do niej czyli undefined, gdy zmienna jest zdeklarowana, ale nie ma     wartości to właśnie mamy błąd undefined.
 5.  
     P: Do czego służy poniższa funkcja? 
 
-    Odp: Nad tym pytaniem spędziłem chyba najwięcej czasu, zakładam, że jest to jakiś rodzaj ekstrapolacji matematycznej, ale naprawdę dziwna funkcja i do konca nie rozumiem jej działania.
+    Odp: Nad tym pytaniem spędziłem chyba najwięcej czasu, zakładam, że jest to jakiś rodzaj ekstrapolacji matematycznej, ale naprawdę dziwna funkcja i do konca nie        rozumiem jej działania.
 
 6. Brak szóstego, ponieważ nigdy nie używałem tych bibliotek.
