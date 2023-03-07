@@ -10,25 +10,18 @@
     P: Napisz program w js, który będzie poprawnie parsował dane.
     Odp: Nie wiem czy taki rezultat autor zadania oczekiwał, natomiast opis tego zadania jest na tyle niezrozumiały, że przyjąłem, że dostaliśmy JSON, którego daliśmy do template stringa, a następnie funkcją za pomocą JSON.parse wyprowadzamy go do dwóch obiektów w tablicy. Rezultat można podejrzeć tutaj: https://codepen.io/IgorPaluch/pen/MWqvmxo?editors=1111
 
-    const data = `[
-  {
-    "element": "1",
-    "parametr": ["pierwszy", 1, "drugi", 2, "trzeci", 3]
-  },
-  { "element": "2", "parametr": [{ "1": 11 }, { "2": 11.34 }, { "3": 87.93 }] }
-    ]`
+    const data = [   { "element": "1", "parametr": ["pierwszy", 1, "drugi", 2, "trzeci", 3]   },   { "element": "2", "parametr": [{ "1": 11 }, { "2": 11.34 }, { "3":   87.93 }] } ]
 
-    let params = [];
+const result = data.find(item => item.parametr);
 
-    function changeJSONToObject (item) {
-    let json = JSON.parse(item);
-    params = json.map((obj) => obj.parametr)
-    return params;
-    } 
+const secondResult = data.find(item => item.element === "2");
 
+const objSecondResult = Object.values(secondResult);
 
+let json = JSON.stringify(objSecondResult);
 
-    console.log(changeJSONToObject(data));
+console.log("Element: "+ parseInt(result.element) + "," + " Values: " + result.parametr);
+console.log("Element: "+ parseInt(secondResult.element) + "," + " Values: " + json )
 4.  
     P: Co zostanie wyswietlone w konsoli?
 
