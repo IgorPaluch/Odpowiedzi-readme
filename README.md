@@ -8,7 +8,7 @@
     Odp: funkcja, która jest uruchamiana za każdym razem, gdy przychodzi żądanie, np. Gdy chcielibysmy usunac uzytkownika, to jest potrzebne potwierdzenie jego autentykacji i dopiero za sprawą tego, możemy podjąć dane działanie.
 3.  
     P: Napisz program w js, który będzie poprawnie parsował dane.
-        Odp: Nie wiem czy taki rezultat autor zadania oczekiwał, natomiast opis tego zadania jest na tyle niezrozumiały, że przyjąłem, że dostaliśmy JSON, którego daliśmy do template stringa, a następnie funkcją za pomocą JSON.parse wyprowadzamy go do dwóch obiektów w tablicy. Rezultat można podejrzeć tutaj: https://codepen.io/IgorPaluch/pen/MWqvmxo?editors=1111
+        Odp: Nie wiem czy taki rezultat autor zadania oczekiwał, natomiast opis tego zadania jest na tyle niezrozumiały, że przyjąłem, że dostaliśmy JSON, którego daliśmy do template stringa, a następnie funkcją za pomocą JSON.parse wyprowadzamy go do dwóch obiektów w tablicy. Rezultat można podejrzeć tutaj: https://codepen.io/IgorPaluch/pen/RwYZzpw?editors=1111
 
         const data = [   { "element": "1", "parametr": ["pierwszy", 1, "drugi", 2, "trzeci", 3]   },   { "element": "2", "parametr": [{ "1": 11 }, { "2": 11.34 }, { "3":   87.93 }] } ]
 
