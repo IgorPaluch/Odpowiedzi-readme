@@ -10,7 +10,7 @@
     P: Napisz program w js, który będzie poprawnie parsował dane.
         Odp: Nie wiem czy taki rezultat autor zadania oczekiwał, natomiast opis tego zadania jest na tyle niezrozumiały, że przyjąłem, że dostaliśmy JSON, którego daliśmy do template stringa, a następnie funkcją za pomocą JSON.parse wyprowadzamy go do dwóch obiektów w tablicy. Rezultat można podejrzeć tutaj: https://codepen.io/IgorPaluch/pen/RwYZzpw?editors=1111
 
-        const data = [   { "element": "1", "parametr": ["pierwszy", 1, "drugi", 2, "trzeci", 3]   },   { "element": "2", "parametr": [{ "1": 11 }, { "2": 11.34 }, { "3":   87.93 }] } ]
+      const data = [   { "element": "1", "parametr": ["pierwszy", 1, "drugi", 2, "trzeci", 3]   },   { "element": "2", "parametr": [{ "1": 11 }, { "2": 11.34 }, { "3":     87.93 }] } ]
 
     const result = data.find(item => item.parametr);
 
@@ -20,7 +20,23 @@
 
     let json = JSON.stringify(objSecondResult);
 
-    console.log("Element: "+ parseInt(result.element) + "," + " Values: " + result.parametr);
+    let newArrayForStrings = [];
+    let newArrayForNumbers = [];
+
+    function sortItems () {
+      console.log("FUNCTIONS IS INVOCED");
+      for(let i = 0; i < result.parametr.length; i++){
+        if(typeof result.parametr[i] === 'string'){
+          newArrayForStrings.push(result.parametr[i])
+        } else {
+          newArrayForNumbers.push(result.parametr[i])
+        }
+      }
+    }
+
+    sortItems();
+
+    console.log("Element: "+ parseInt(result.element) + "," + " Values words: " + newArrayForStrings + "," + " Values: " + newArrayForNumbers);
     console.log("Element: "+ parseInt(secondResult.element) + "," + " Values: " + json )
 4.  
     P: Co zostanie wyswietlone w konsoli?
